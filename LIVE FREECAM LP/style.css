@@ -1,0 +1,339 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+header {
+    position: relative;
+    background-color: rgb(0, 0, 0);
+    background-size: cover;
+    height: 100vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+h1 {
+    color: #FF0000;
+    font-size: clamp(32px, 8vw, 70px);
+    text-align: center;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+  
+header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+    position: relative;
+    z-index: 2;
+    padding: 0 15px;
+}
+
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(3, 3, 3);
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.btn {
+    border-radius: 10px;
+    padding: 12px 30px;
+    font-size: clamp(14px, 2.5vw, 18px);
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.win, .win:hover {
+    background-color: #ff0000;
+    border: 2px solid white;
+    color: white;
+}
+
+.win:hover {
+    background-color: #cc0000;
+    transform: scale(1.05);
+}
+
+.profile-container {
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 50px 20px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.stars {
+    margin: 10px 0;
+}
+
+.stars i {
+    color: #FFD700;
+    font-size: clamp(16px, 3vw, 20px);
+}
+
+.stars span {
+    color: #FFD700;
+    font-size: clamp(14px, 2.5vw, 16px);
+    margin-left: 5px;
+}
+
+.lead {
+    font-size: clamp(16px, 3vw, 20px);
+    line-height: 1.4;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.desc {
+    font-size: clamp(14px, 2.5vw, 16px);
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+.social-container {
+    width: 100%;
+    max-width: 280px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    gap: 10px;
+}
+
+.social-container button {
+    border: none;
+    outline: none;
+    width: clamp(35px, 8vw, 40px);
+    height: clamp(35px, 8vw, 40px);
+    border-radius: 50%;
+    font-size: clamp(1em, 2.5vw, 1.3em);
+    cursor: pointer;
+    box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
+    flex-shrink: 0;
+}
+
+.social-container button:hover {
+    transform: scale(1.1);
+}
+
+.social-container button.whatsapp {
+    background: #09ff00;
+}
+
+.social-container button.twitter {
+    background: #39b4dd;
+}
+
+.social-container button.instagram {
+    background: linear-gradient(45deg, #e6683ccc 25%, #dc2743 50%, #bc1888 100%);
+}
+
+.social-container button.snapchat {
+    background: #deeb26;
+}
+
+ul {
+    margin: 0px 0 0 0;
+    padding: 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    display: block;
+    font: 200 16px 'Circular', arial, verdana;
+    padding: 7px 10px 7px 10px;
+}
+
+ul li a b {
+    position: relative;
+    top: 10px;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+    letter-spacing: 1px;
+}
+
+/* Mobile First Responsive Design */
+
+/* Extra Small devices (phones, 320px and up) */
+@media screen and (max-width: 480px) {
+    header {
+        min-height: 100vh;
+    }
+    
+    h1 {
+        font-size: clamp(28px, 10vw, 45px);
+        margin-bottom: 8px;
+    }
+    
+    .profile-container {
+        padding: 30px 15px 30px;
+        width: 100%;
+    }
+    
+    .social-container {
+        max-width: 250px;
+        gap: 8px;
+    }
+    
+    .btn {
+        padding: 10px 25px;
+        width: 100%;
+        max-width: 200px;
+    }
+    
+    .lead, .desc {
+        padding: 0 5px;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+    h1 {
+        font-size: clamp(40px, 8vw, 55px);
+    }
+    
+    .profile-container {
+        padding: 40px 20px 35px;
+    }
+    
+    .social-container {
+        max-width: 260px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    h1 {
+        font-size: clamp(50px, 7vw, 65px);
+    }
+    
+    .profile-container {
+        padding: 60px 30px 40px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+    h1 {
+        font-size: 70px;
+    }
+    
+    .profile-container {
+        padding: 100px 50px 40px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* Landscape orientation adjustments */
+@media screen and (orientation: landscape) and (max-height: 500px) {
+    header {
+        min-height: 500px;
+    }
+    
+    .profile-container {
+        padding: 20px 20px 20px;
+    }
+    
+    h1 {
+        font-size: clamp(24px, 6vw, 40px);
+        margin-bottom: 5px;
+    }
+    
+    .lead, .desc {
+        font-size: clamp(12px, 2vw, 14px);
+        margin-bottom: 10px;
+    }
+    
+    .social-container {
+        margin-bottom: 15px;
+    }
+}
+
+/* High DPI displays */
+@media screen and (-webkit-min-device-pixel-ratio: 2), 
+       screen and (min-resolution: 192dpi) {
+    .social-container button {
+        box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .social-container button {
+        width: 44px;
+        height: 44px;
+        font-size: 1.2em;
+    }
+    
+    .btn {
+        padding: 14px 32px;
+        font-size: 16px;
+    }
+}
+
+/* Accessibility - Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .social-container button,
+    .btn {
+        transition: none;
+    }
+    
+    .social-container button:hover,
+    .win:hover {
+        transform: none;
+    }
+}
+
+/* Print styles */
+@media print {
+    header video {
+        display: none;
+    }
+    
+    header {
+        background: white;
+        color: black;
+    }
+    
+    .overlay {
+        display: none;
+    }
+}
